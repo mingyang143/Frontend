@@ -75,7 +75,8 @@ function AuthProvider({ children }: ChildrenProps) {
   }
   async function createUser(username: string) {
     dispatch({ type: "toggleLoading" });
-    const data = await dbPostUser({ name: username });
+    //const data = await dbPostUser({ name: username });
+    await dbPostUser({ name: username });
     dispatch({ type: "toggleLoading" });
     // if (data) {
     //   alert("New user created, please log in now");
